@@ -1,0 +1,13 @@
+    @media only screen and (max-width: 600px) {
+  h6{
+      font-size:0.8rem!important;
+       text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 768px) {
+
+    h6{
+        font-size:1.0rem!important;
+        text-transform: uppercase;
+    }
+}

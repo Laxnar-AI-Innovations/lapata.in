@@ -1,0 +1,26 @@
+-- Usage:
+-- pgloader db/pgloader.load
+
+LOAD DATABASE
+     FROM mysql://{MYSQL_USER}:{MYSQL_PASS}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DB}
+     INTO postgresql://{PG_USER}:{PG_PASS}@{PG_HOST}:{PG_PORT}/{PG_DB}?sslmode=require
+
+ WITH include drop, create tables, create indexes, reset sequences, workers = 8, concurrency = 2
+
+ SET work_mem to '64MB', maintenance_work_mem to '128MB'
+
+ CAST type tinyint to smallint drop typemod,
+      type tinyint(1) to boolean using tinyint-to-boolean,
+      type datetime to timestamp,
+      type date to date,
+      type time to time,
+      type mediumtext to text,
+      type longtext to text,
+      type varchar drop typemod,
+      type decimal when (p, s) -> (p <= 18) to numeric drop typemod
+
+ BEFORE LOAD DO
+ $$ create extension if not exists citext; $$
+
+-- You can add specific table renames or column fixes here if needed
+

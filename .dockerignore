@@ -1,0 +1,11 @@
+.git
+.gitignore
+vendor
+application/cache
+application/logs
+writable/sessions
+upload
+*.log
+
+
+

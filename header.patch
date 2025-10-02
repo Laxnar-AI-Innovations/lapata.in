@@ -1,0 +1,22 @@
+diff --git a/application/views/landing_page/header.php b/application/views/landing_page/header.php
+index 0dc4096d..51f12783 100755
+--- a/application/views/landing_page/header.php
++++ b/application/views/landing_page/header.php
+@@ -137,7 +137,7 @@ left:auto!important;
+                             Sign Up &nbsp;&nbsp;</a>
+                             <ul class="dropdown-menu">
+                                 <li class="nav-item"><a class="dropdown-item" href="<?php echo base_url(); ?>complete-your-kyc">General User</a></li>
+-                                <li class="nav-item"><a class="dropdown-item text-warning" href="<?php echo base_url(); ?>commercial-register">Commercial (Firm)</a></li>
++                                <!-- <li class="nav-item"><a class="dropdown-item text-warning" href="<?php echo base_url(); ?>commercial-register">Commercial (Firm)</a></li> -->
+                                 <li class="nav-item"><a class="dropdown-item text-success" href="javascript:void(0);">Social NGO</a></li>
+                                 <li class="nav-item"><a class="dropdown-item text-danger" href="javascript:void(0);">Police Department</a></li>
+                                 
+@@ -150,7 +150,7 @@ left:auto!important;
+                             Login &nbsp;&nbsp;</a>
+                             <ul class="dropdown-menu">
+                                 <li class="nav-item"><a class="dropdown-item" href="<?php echo base_url(); ?>login">General User</a></li>
+-                                <li class="nav-item"><a class="dropdown-item text-warning" href="<?php echo base_url(); ?>hotel">Commercial (Firm)</a></li>
++                                <!-- <li class="nav-item"><a class="dropdown-item text-warning" href="<?php echo base_url(); ?>hotel">Commercial (Firm)</a></li> -->
+                                 <li class="nav-item"><a class="dropdown-item text-success" href="<?php echo base_url(); ?>social-login">Social NGO</a></li>
+                                 <li class="nav-item"><a class="dropdown-item text-danger" href="<?php echo base_url(); ?>police-thana-login">Police Department</a></li>
+                             </ul>

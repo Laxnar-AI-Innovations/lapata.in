@@ -1,0 +1,5 @@
+Sitemap: https://khoji.in/sitemap.xml
+User-agent: *
+Disallow: /khoji-user-access
+Disallow: /login
+Crawl-delay: 10
