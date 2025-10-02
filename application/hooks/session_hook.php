@@ -1,3 +1,15 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+// Minimal pre_system hook to avoid missing file errors.
+// Intentionally a no-op; can be expanded to ensure DB session table.
+if (!function_exists('ensure_session_table')) {
+    function ensure_session_table() {
+        // no-op
+        return;
+    }
+}
+
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 function ensure_session_table() {
